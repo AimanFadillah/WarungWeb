@@ -21,7 +21,7 @@ Route::get('/',[HomeController::class,'index']);
 Route::get('/beranda',[HomeController::class,'index']);
 
 // login
-Route::get('/login',[LoginController::class,'index'])->middleware('guest');
+Route::get('/login',[LoginController::class,'index'])->name("login")->middleware('guest');
 Route::post('/login',[LoginController::class,'verifikasi']);
 Route::post('/logout',[LoginController::class,'logout']);
 
