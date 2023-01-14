@@ -17,8 +17,18 @@
         </form> 
 
         {{-- barang --}}
+            @if( session()->has("success") )
+            <div class="row justify-content-center ">
+            <div class="alert alert-success alert-dismissible fade show col-md-9 " role="alert">
+                {{ session("success") }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            </div>
+            @endif
 
             <div class="col-md-10 text-left shadow" style="margin: 0 auto" >
+                
+
                 <table class="table " >
                     <thead>
                       <tr>

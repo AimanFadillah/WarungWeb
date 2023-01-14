@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashbordController;
+use App\Http\Controllers\TentangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ Route::get('/beranda',[HomeController::class,'index']);
 Route::get('/login',[LoginController::class,'index'])->name("login")->middleware('guest');
 Route::post('/login',[LoginController::class,'verifikasi']);
 Route::post('/logout',[LoginController::class,'logout']);
+
+// tentang 
+Route::get("/tentang",[TentangController::class,"index"]);
 
 // Dashbord
 Route::resource('/dashbord/barang',DashbordController::class)->middleware('auth');

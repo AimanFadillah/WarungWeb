@@ -21,7 +21,7 @@ class LoginController extends Controller
 
         if(Auth::attempt( $validatedData ) ){
             $request->session()->regenerate();
-            return redirect()->intended("/beranda");
+            return redirect()->intended("/beranda")->with("success","Selamat Datang Operator");
         }
 
         return back()->with("gagal","Data yang anda masukkan mengalami kegagalan");

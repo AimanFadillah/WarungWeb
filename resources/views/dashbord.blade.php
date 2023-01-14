@@ -65,6 +65,6 @@
         <div class="d-flex justify-content-center ">
             {{ $barang->links() }}
         </div>
-       
+</div>  
     
 @endsection
