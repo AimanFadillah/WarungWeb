@@ -20,6 +20,9 @@ use App\Http\Controllers\TentangController;
 // home
 Route::get('/',[HomeController::class,'index']);
 Route::get('/beranda',[HomeController::class,'index']);
+Route::get('/excel',[HomeController::class,'excel']);
+Route::get('/pdf',[HomeController::class,'pdf']);
+Route::get('/csv',[HomeController::class,'csv']);
 
 // login
 Route::get('/login',[LoginController::class,'index'])->name("login")->middleware('guest');

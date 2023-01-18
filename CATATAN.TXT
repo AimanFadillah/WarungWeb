@@ -1,0 +1,6 @@
+Untuk Export Dan Import
+
+-composer require barryvdh/laravel-dompdf (PDF)
+
+-composer require phpoffice/phpspreadsheet (EXCEL,CSV) <=> "jika terjadi error hapus composer lock dulu"
+
